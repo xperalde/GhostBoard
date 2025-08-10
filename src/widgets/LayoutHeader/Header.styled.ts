@@ -1,12 +1,19 @@
 import styled from 'styled-components';
 
 const HeaderStyled = styled.header`
-  background-color: #222;
+  background-color: var(--header-bg);
   width: 100%;
-  color: #eee;
+  color: var(--header-text);
   padding: 20px;
-  text-align: center;
-  border-top: 1px solid #444;
+  border-top: 1px solid var(--header-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .button-container {
+    display: flex;
+    gap: 10px;
+  }
 
   p {
     margin: 4px 0;

@@ -4,11 +4,14 @@ import Footer from '../widgets/LayoutFooter/Footer.tsx';
 import Header from '../widgets/LayoutHeader/Header.tsx';
 import PostList from '../widgets/PostList/PostList.tsx';
 import { mockPosts } from '../entities/post/api/api.ts';
+import ThemeProvider from '../shared/lib/theme/ThemeProvider.tsx';
 const App: FC = () => {
   return (
-    <MainLayout Header={<Header />} Footer={<Footer />}>
-      <PostList posts={mockPosts} />
-    </MainLayout>
+    <ThemeProvider>
+      <MainLayout Header={<Header />} Footer={<Footer />}>
+        <PostList posts={mockPosts} />
+      </MainLayout>
+    </ThemeProvider>
   );
 };
 export default App;

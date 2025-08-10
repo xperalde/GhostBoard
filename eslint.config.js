@@ -42,7 +42,7 @@ export default tseslint.config([
           bracketSpacing: true,
           bracketSameLine: false,
           arrowParens: 'always',
-          endOfLine: 'lf',
+          endOfLine: 'crlf',
         },
       ],
     },

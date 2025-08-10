@@ -1,0 +1,27 @@
+import styled from 'styled-components';
+
+const ButtonStyled = styled.button`
+  padding: 10px 16px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: 2px solid var(--button-border);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--button-border);
+    color: white;
+  }
+
+  &:active {
+    background-color: #005fcc;
+    border-color: #005fcc;
+  }
+`;
+
+export default ButtonStyled;
