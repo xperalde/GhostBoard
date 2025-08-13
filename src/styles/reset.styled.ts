@@ -1,0 +1,71 @@
+import { createGlobalStyle } from 'styled-components';
+
+const ResetStyle = createGlobalStyle`
+  /* ===== CSS Reset (мягкий) ===== */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+  }
+
+  /* Убираем базовое оформление списков */
+  ul,
+  ol {
+    list-style: none;
+  }
+
+  /* Убираем подчеркивания у ссылок по умолчанию */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* ===== Базовая типографика ===== */
+  :root {
+    font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    /* Цвета по умолчанию */
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    min-width: 320px;
+    min-height: 100vh;
+  }
+
+  /* ===== Кнопки ===== */
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  /* ===== Темная/светлая тема ===== */
+  @media (prefers-color-scheme: light) {
+    :root {
+      color: #213547;
+      background-color: #ffffff;
+    }
+  }
+`;
+
+export default ResetStyle;

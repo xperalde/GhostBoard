@@ -1,14 +1,16 @@
 import styled from 'styled-components';
 
 const PostCardStyled = styled.div`
-  background-color: #2c2c2c;
-  color: #fff;
+  background-color: var(--modal-bg);
+  color: var(--modal-text);
   border-radius: 8px;
   padding: 16px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   transition:
     transform 0.2s ease,
-    box-shadow 0.2s ease;
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
 
   &:hover {
     transform: translateY(-4px);
@@ -21,7 +23,7 @@ const PostCardStyled = styled.div`
 
   p:first-child {
     font-weight: bold;
-    color: #ffd700;
+    color: #c9a825;
   }
 
   p:nth-child(2) {
@@ -31,7 +33,7 @@ const PostCardStyled = styled.div`
 
   p:last-child {
     font-size: 0.9rem;
-    color: #ccc;
+    color: var(--text);
   }
 `;
 
