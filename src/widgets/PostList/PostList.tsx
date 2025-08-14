@@ -1,6 +1,7 @@
 import type { FC } from 'react';
-import PostCard from '../../entities/post/ui/PostCard.tsx';
-import PostListStyled from './PostList.styled.ts';
+import PostCard from '../../entities/post/ui/PostCard';
+import styles from './PostList.module.css';
+
 type Post = {
   author: string;
   id: number;
@@ -11,14 +12,16 @@ type Post = {
 type PostListProps = {
   posts: Post[];
 };
+
 const PostList: FC<PostListProps> = ({ posts }) => {
   return (
-    <PostListStyled>
+    <div className={styles.postList}>
       {posts.map((post) => (
         <PostCard key={post.id} author={post.author} title={post.title} body={post.body} />
       ))}
-    </PostListStyled>
+    </div>
   );
 };
 
 export default PostList;
+

@@ -1,12 +1,13 @@
 import type { FC } from 'react';
 import { memo } from 'react';
-import HeaderStyled from './Header.styled';
+import styles from './Header.module.css';
+
 const HeaderComponent: FC = () => {
   return (
-    <HeaderStyled>
+    <header className={styles.header}>
       <p>Проект Aston</p>
       <p>Онлайн интенсив</p>
-    </HeaderStyled>
+    </header>
   );
 };
 
