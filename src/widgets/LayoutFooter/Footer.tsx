@@ -1,15 +1,15 @@
 import type { FC } from 'react';
 import { memo } from 'react';
-import FooterStyled from './Footer.styled.ts';
+import styles from './Footer.module.css';
+
 const FooterComponent: FC = () => {
   return (
-    <FooterStyled>
-      <p>©Рыжков Данила</p>
-      <p>49 поток.self-pased</p>
-    </FooterStyled>
+    <footer className={styles.footer}>
+      <p className={styles.footer__text}>©Рыжков Данила</p>
+      <p className={styles.footer__text}>49 поток.self-pased</p>
+    </footer>
   );
 };
 
 const Footer = memo(FooterComponent);
-
 export default Footer;

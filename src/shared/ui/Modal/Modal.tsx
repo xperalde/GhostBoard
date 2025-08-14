@@ -1,7 +1,7 @@
 import type { FC, ReactNode } from 'react';
 import { useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import ModalStyled from './Modal.styled';
+import styles from './Modal.module.css';
 
 type ModalProps = {
   isOpen: boolean;
@@ -19,15 +19,14 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, children }) => {
   }, [onClose]);
 
   const modalRoot = document.getElementById('modal-root');
-
   if (!isOpen || !modalRoot) return null;
 
   return ReactDOM.createPortal(
-    <ModalStyled onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+    <div className={styles.modal} onClick={onClose}>
+      <div className={styles.modal__content} onClick={(e) => e.stopPropagation()}>
         {children}
       </div>
-    </ModalStyled>,
+    </div>,
     modalRoot
   );
 };
