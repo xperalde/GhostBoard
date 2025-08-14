@@ -1,5 +1,5 @@
 import type { FC, ReactNode } from 'react';
-import ButtonStyled from './Button.styled';
+import styles from './Button.module.css';
 
 type ButtonProps = {
   children: ReactNode;
@@ -7,7 +7,11 @@ type ButtonProps = {
 };
 
 const Button: FC<ButtonProps> = ({ children, onClick }) => {
-  return <ButtonStyled onClick={onClick}>{children}</ButtonStyled>;
+  return (
+    <button className={styles.button} onClick={onClick}>
+      {children}
+    </button>
+  );
 };
 
 export default Button;
