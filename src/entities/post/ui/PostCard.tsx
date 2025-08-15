@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import { memo } from 'react';
-import PostCardStyled from './PostCard.styled.ts';
+import styles from './PostCard.module.css';
 
 type PostCardProps = {
   author: string;
@@ -8,16 +8,15 @@ type PostCardProps = {
   body: string;
 };
 
-const PostListComponent: FC<PostCardProps> = ({ author, title, body }) => {
+const PostCardComponent: FC<PostCardProps> = ({ author, title, body }) => {
   return (
-    <PostCardStyled>
-      <p>{author}</p>
-      <p>{title}</p>
-      <p>{body}</p>
-    </PostCardStyled>
+    <div className={styles['post-card']}>
+      <p className={styles['post-card__author']}>{author}</p>
+      <p className={styles['post-card__title']}>{title}</p>
+      <p className={styles['post-card__body']}>{body}</p>
+    </div>
   );
 };
 
-const PostList = memo(PostListComponent);
-
-export default PostList;
+const PostCard = memo(PostCardComponent);
+export default PostCard;
