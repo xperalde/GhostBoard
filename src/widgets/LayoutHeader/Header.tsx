@@ -20,8 +20,17 @@ const HeaderComponent: FC = () => {
       </header>
 
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <h2>О проекте</h2>
-        <p>Это учебный проект, выполненный в рамках онлайн интенсива Aston.</p>
+        <Modal.Header>
+          <h2>О проекте</h2>
+        </Modal.Header>
+
+        <Modal.Body>
+          <p>Это учебный проект, выполненный в рамках онлайн интенсива Aston.</p>
+        </Modal.Body>
+
+        <Modal.Footer>
+          <Button onClick={() => setIsModalOpen(false)}>Закрыть</Button>
+        </Modal.Footer>
       </Modal>
     </>
   );

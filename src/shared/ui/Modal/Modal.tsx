@@ -9,7 +9,11 @@ type ModalProps = {
   children: ReactNode;
 };
 
-const Modal: FC<ModalProps> = ({ isOpen, onClose, children }) => {
+const Modal: FC<ModalProps> & {
+  Header: FC<{ children: ReactNode }>;
+  Body: FC<{ children: ReactNode }>;
+  Footer: FC<{ children: ReactNode }>;
+} = ({ isOpen, onClose, children }) => {
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
@@ -30,5 +34,11 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, children }) => {
     modalRoot
   );
 };
+
+Modal.Header = ({ children }) => <div className={styles.modal__header}>{children}</div>;
+
+Modal.Body = ({ children }) => <div className={styles.modal__body}>{children}</div>;
+
+Modal.Footer = ({ children }) => <div className={styles.modal__footer}>{children}</div>;
 
 export default Modal;
