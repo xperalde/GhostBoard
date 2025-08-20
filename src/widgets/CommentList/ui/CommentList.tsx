@@ -1,12 +1,7 @@
 import type { FC } from 'react';
-import { useState, useCallback } from 'react';
+import { useCallback, useState } from 'react';
+import type { Comment } from '../../../entities/comment/api/useComment';
 import styles from './CommentList.module.css';
-
-type Comment = {
-  id: number;
-  author: string;
-  text: string;
-};
 type CommentListProps = {
   comments: Comment[];
 };
@@ -31,8 +26,10 @@ const CommentList: FC<CommentListProps> = ({ comments }) => {
           ) : (
             comments.map((comment) => (
               <li key={comment.id} className={styles['comment-list__item']}>
-                <span className={styles['comment-list__author']}>{comment.author}:</span>
-                {comment.text}
+                <span className={styles['comment-list__author']}>
+                  {comment.name} ({comment.email}):
+                </span>{' '}
+                {comment.body}
               </li>
             ))
           )}

@@ -1,0 +1,34 @@
+.user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 16px;
+  max-width: 800px;
+  margin: 100px auto;
+  min-height: 50%;
+}
+
+.user-details__actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.user-details__button {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: 1px solid var(--button-border);
+  background: var(--button-bg);
+  color: var(--button-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition:
+    background 0.2s ease,
+    transform 0.1s ease;
+}
+
+.user-details__button:hover {
+  background: var(--button-border);
+  color: #fff;
+  transform: translateY(-1px);
+}

@@ -1,0 +1,9 @@
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 100px auto 0 auto;
+  min-height: 65%;
+}

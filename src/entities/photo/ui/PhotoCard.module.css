@@ -1,0 +1,23 @@
+.photo-card {
+  background-color: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--header-border);
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  max-width: 200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.photo-card__thumbnail {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.photo-card__title {
+  font-size: 0.9rem;
+  text-align: center;
+}

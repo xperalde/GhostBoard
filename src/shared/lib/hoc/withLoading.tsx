@@ -6,9 +6,7 @@ type withLoadingProps = {
 function withLoading<P extends object>(WrappedComponent: ComponentType<P>) {
   return function ComponentWithLoading(props: P & withLoadingProps) {
     const { isLoading, ...rest } = props;
-    console.log('Loading...');
     if (isLoading) {
-      console.log('Loading...');
       return <Preloader />;
     }
 
