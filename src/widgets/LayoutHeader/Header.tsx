@@ -4,6 +4,7 @@ import styles from './Header.module.css';
 import Modal from '../../shared/ui/Modal/Modal';
 import Button from '../../shared/ui/Button/Button';
 import ThemeSwitcher from '../../features/ThemeSwitcher/ui/ThemeSwitcher';
+import Navbar from '../UserTabs/UserTabs';
 
 const HeaderComponent: FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -12,7 +13,7 @@ const HeaderComponent: FC = () => {
     <>
       <header className={styles.header}>
         <p className={styles.header__text}>Проект Aston</p>
-        <p className={styles.header__text}>Онлайн интенсив</p>
+        <Navbar />
         <div className={styles['header__button-container']}>
           <Button onClick={() => setIsModalOpen(true)}>О проекте</Button>
           <ThemeSwitcher />
